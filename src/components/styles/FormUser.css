@@ -1,0 +1,101 @@
+.form__close{
+    transform: scale(0);
+}
+
+.form-container{
+    /* para que ya no tenga un espacio reservado en el body */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: --second-color;
+    backdrop-filter: blur(3px);
+    display: grid;
+    place-content: center;
+    transition: transform 500ms ease-in-out;
+    z-index: 1;
+}
+
+.form{
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--white-color);
+    padding: 2em 1.5em 2.5em;
+    border-radius: 0.8em;
+    display: grid;
+    gap: 0.7em;
+    position: relative;
+}
+
+.form__title{
+    text-align: center;
+    margin-bottom: 0.3em;
+    font-weight: 900;
+    font-size: 1.3rem;
+    color: var(--main-color);
+}
+
+.form__exit{
+    display: flex;
+    color: var(--red-color);
+    position: absolute;  
+    font-weight: bold;
+    font-size: 1.5em;
+    top: 1em;
+    right: 1em;
+    cursor: pointer;
+
+    &:hover{
+
+        background-color: var(--red-color);
+        color: var(--white-color);
+        border-radius: 0.2em;
+    }
+
+}
+
+.form__label{
+    display: flex;
+    flex-direction: column;
+    gap: 0.em;
+    color: var(--main-color);
+}
+
+.form__field{
+    font-size: 0.9rem;
+    font-weight: 900;
+    padding-left: 1em;
+}
+
+.form__input{
+    border: 1px solid var(--gris-color);
+    border-radius: 0.5em;
+    padding: 0.5em 1.2em;
+    font-weight: 500;
+    width: 20em;
+
+    /*selector segun el tipo de dato del input
+    &[type="text"]{
+        text-transform: uppercase;
+    }*/
+
+}
+
+
+
+.form__btn{
+    margin-top: 1em;
+    font-size: 1rem;
+    padding: 0.3em 1em;
+    background-color:  var(--main-color-transparent);
+    border: none;
+    border-radius: 0.5em;
+    color: var(--white-color);
+    font-weight: 600;
+
+    &:hover{
+        filter: brightness(1.2);
+    }
+}
+

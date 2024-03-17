@@ -1,0 +1,64 @@
+*{
+  box-sizing: border-box;
+
+  --main-color: rgb(147 119 205);
+  
+  --second-color: rgba(147 119 205 / 0.1);
+  --main-color-transparent: rgba(147 119 205 / 0.8);
+  --main-color-transparent2: rgb(147 119 205 /1);
+  --main-color-transparent3:rgba(147 119 205 / 0.4);
+  --main-color-transparent4:rgba(147 119 205 / 0.6);
+
+  --white-color: rgb(255 255 255);
+  --gris-color:rgb(170 170 170);
+  --gris-color2: rgb(225 224 228);
+  --gris-color3:rgb(217 217 218);
+  --red-color: rgb(255 0 0);
+  --red-color-transparent:rgba(255 0 0 / 0.8);
+  --red-color-orange: rgba(248 134 4 / 0.8);
+  --blue-color: rgb(0 0 255);
+}
+
+html{
+  scroll-behavior: smooth;
+  font-family: "Urbanist", sans-serif;
+
+}
+
+body{
+  margin: 0;
+}
+
+h1, 
+h2, 
+h3,
+p,
+hr
+ul{
+  margin-top: 0;
+  padding-bottom: 0;
+
+}
+
+ul{
+  list-style: none;
+  padding-left: 0;
+}
+
+input{
+  /*Se debe colocar q herede el tipo de letra x default no lo hace */
+  outline: none;
+  font-family: inherit;
+}
+
+
+button{
+  /*Se debe colocar q herede el tipo de letra x default no lo hace */
+  cursor: pointer;
+  font-family: inherit;
+}
+
+img{
+  display: block;
+  width: 100%;
+}

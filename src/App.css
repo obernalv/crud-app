@@ -1,0 +1,37 @@
+.app__header{
+    width: 100%;
+    height: 120px;
+    padding: 2em;  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    .app__title{
+        letter-spacing: 0.1em;
+        font-weight: 900;
+        color: var(--main-color-transparent);
+        margin-block: 0;
+    }
+
+    .btn2{
+        border: none;
+        height: 100%;
+        width: 4em;
+        background-color: var(--main-color-transparent);
+        border-radius: .5em;
+
+        &:hover{
+            filter: brightness(1.2);
+            transform: scale(1.1);
+        }
+    }
+
+    .bx{
+        font-size: 2.8em;
+        color: var(--white-color);
+        
+    }
+
+}
+

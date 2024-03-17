@@ -1,0 +1,85 @@
+.user-container{
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.card{
+    width: 300px;
+    max-width: 300px;
+    height: 200px;
+    max-height: 200px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 5px 8px var(--main-color-transparent3);
+    border-radius: .5em;
+    overflow: hidden;
+    padding: 1em;
+}
+
+.card__title{
+    text-align:  center;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.card__list{
+    display: flex;
+    flex-direction: column;
+    row-gap: .4em;
+}
+
+.card__item{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.card__label{
+    font-weight: bold;
+    color: var(--main-color);
+    letter-spacing: 0.1em;
+}
+
+.card__opt{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card:hover .card__opt {
+    /* Estilos para mostrar los botones cuando la tarjeta está en estado de hover */
+    display: flex;
+    background-color: var(--main-color-transparent4);
+    backdrop-filter: opacity(90%);
+    gap: 0.5em;
+
+
+    & > button{
+        font-size: 2em;
+        border: none;
+        background-color: transparent;
+    }
+
+    .btn-delete{
+        color: var(--red-color);
+       
+    }
+
+    .btn-edit{
+        color: var(--blue-color);
+    }
+    
+}
+
+.card:hover .card__opt > button:hover {
+    transform: scale(2.0); /* Aumenta la escala al pasar el mouse sobre los botones */
+}

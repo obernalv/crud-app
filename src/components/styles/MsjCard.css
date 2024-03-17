@@ -1,0 +1,60 @@
+.card-mensaje{
+    position: fixed;
+    margin: 0.5em;
+    background-color: var(--main-color-transparent2);
+    display: flex;
+    flex-direction: column;
+
+    padding: 1em;
+    border-radius: .5em;
+    z-index: 1;
+
+    .mensaje__title{
+        color: var(--gris-color2);
+        font-size: 1em;
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: 0.2em;
+    }
+
+    .mensaje__content{
+        color: var(--gris-color3);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.2em;
+
+    }
+
+    .mensaje__icono{
+        width: 48px;
+    }
+
+    .mensaje__detalle{
+        margin-block: 0;
+        
+    }
+
+    .mensaje__control{
+        padding-top: 1em;
+        display: flex;
+        gap: 0.5em;
+        justify-content: end;
+    }
+
+    .control-btn{
+        border: none;
+        border-radius: 0.3em;
+        font-weight: 600;
+        padding: 0.3em;
+        color: var(--white-color);
+    }
+
+    .btn-ok{
+        background-color: var(--red-color-transparent);
+    }
+    .btn-can{
+        background-color: var(--red-color-orange);
+    }
+}
