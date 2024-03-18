@@ -9,12 +9,13 @@
     left: 0;
     width: 100%;
     min-height: 100vh;
-    background-color: --second-color;
+    background-color: var(--second-color);
     backdrop-filter: blur(3px);
     display: grid;
     place-content: center;
     transition: transform 500ms ease-in-out;
     z-index: 1;
+
 }
 
 .form{
@@ -26,6 +27,7 @@
     display: grid;
     gap: 0.7em;
     position: relative;
+    box-shadow: 0 1px 6px 1px var(--main-color);
 }
 
 .form__title{
