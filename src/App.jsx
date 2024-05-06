@@ -12,7 +12,8 @@ function App() {
 
   const [showMessage, setShowMessage] = useState(false)
 
-  const BASEURL = 'https://users-crud.academlo.tech'
+  //const BASEURL = 'https://users-crud.academlo.tech'
+  const BASEURL = 'https://users-rest-api-t2vc.onrender.com'
   const [users, message, getUser, createUser, deleteUser, updateUser] = useCrud(BASEURL)
 
   useEffect(() => {
@@ -32,10 +33,11 @@ function App() {
     setShowMessage(false);
   };
 
+  //console.log(users);
+
   return (
 
     <div className='app'>
-
 
       {
         message && showMessage && (
@@ -43,7 +45,7 @@ function App() {
             messageTitle="Información"
             messageDetalle={message}
             valorProcesar={''}
-            icono={'/images/check.png'}
+            icono='/images/check.png'
             onCancel={handleCloseMessage}
             autoCloseDelay={2000}
           />
@@ -72,7 +74,6 @@ function App() {
 
       <div className='user-container'>
         {
-
           users?.map(user => (
             <UserCard
               key={user.id}
@@ -83,7 +84,6 @@ function App() {
               handleShowMessage={handleShowMessage}
             />
           ))
-
 
         }
       </div>

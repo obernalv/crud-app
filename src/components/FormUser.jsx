@@ -12,7 +12,7 @@ const FormUser = ({ createUser, userEdit, updateUser, setUserEdit, formIsClose, 
     reset(userEdit)
   }, [userEdit])
 
-
+ 
   const submit = data => {
 
     if (userEdit) {
@@ -80,7 +80,7 @@ const FormUser = ({ createUser, userEdit, updateUser, setUserEdit, formIsClose, 
         </label>
         <label className="form__label">
           <span className="form__field">Cumpleaños</span>
-          <input className="form__input" {...register('birthday')} type="date" />
+          <input className="form__input" {...register('birthday')} type="date" required />
         </label>
         <button className="form__btn">Aceptar</button>
 

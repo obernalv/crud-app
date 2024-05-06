@@ -1,5 +1,6 @@
 .card-mensaje{
     position: fixed;
+
     margin: 0.5em;
     background-color: var(--main-color-transparent2);
     display: flex;
@@ -54,7 +55,9 @@
     .btn-ok{
         background-color: var(--red-color-transparent);
     }
+
     .btn-can{
         background-color: var(--red-color-orange);
     }
+    
 }

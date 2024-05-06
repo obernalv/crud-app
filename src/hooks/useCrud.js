@@ -7,7 +7,6 @@ const useCrud = (BASEURL) => {
 
     //principal para respuesta de data de la API
     const [response, setResponse] = useState()
-
     const [message, setMessage] = useState(null);
 
     const handleApiSuccess = (message) => {
@@ -29,8 +28,10 @@ const useCrud = (BASEURL) => {
         axios.post(url, data)
         .then(res =>{
             //console.log(res.data);
-            setResponse([...response, res.data])
-            handleApiSuccess(mensajesApp.success);
+            const { message, data: responseData } = res.data;
+            setResponse([...response, responseData])
+            handleApiSuccess(message);
+            //console.log(res.data);
         })
         .catch(er =>console.log(er.data))
     }
@@ -41,18 +42,19 @@ const useCrud = (BASEURL) => {
         .then(res =>{
             //console.log(res.data);
             setResponse(response.filter(e => e.id !== id))
-            handleApiSuccess(mensajesApp.success);  
+            handleApiSuccess(mensajesApp.succes);  
         })
         .catch(er =>console.log(er.data))
     }
 
     const updateAPI = (path, id, data) =>{
         const url =`${BASEURL}${path}${id}/`
-        axios.patch(url,data)
+        axios.put(url,data)
         .then(res =>{
             //console.log(res.data);
-            setResponse(response.map(e => e.id === id ? res.data : e))
-            handleApiSuccess(mensajesApp.success);
+            const { message, data: responseData } = res.data;
+            setResponse(response.map(e => e.id === id ? responseData : e))
+            handleApiSuccess(message);
         })
         .catch(er =>console.log(er.data))
     }

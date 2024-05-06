@@ -35,13 +35,13 @@ MsjCard.propTypes = {
   onCancel: PropTypes.func,
   messageTitle: PropTypes.string.isRequired,
   messageDetalle: PropTypes.string,
-  icono: PropTypes.element,
+  icono: PropTypes.string,
   valorProcesar: PropTypes.string,
   tipoOperacion: PropTypes.oneOf(['actualizar', 'eliminar', 'informacion']),
 };
 
 MsjCard.defaultProps = {
-  icono: null,
+  icono: '/images/information.png',
   valorProcesar: '',
   tipoOperacion: 'informacion', // Por defecto, mensaje de información
 };

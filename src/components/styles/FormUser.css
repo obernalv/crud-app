@@ -101,3 +101,8 @@
     }
 }
 
+@media (max-width: 320px) {
+    .form{
+       padding:  1em 0.5em 1.5em;
+    }
+}
